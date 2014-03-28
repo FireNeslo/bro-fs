@@ -1,7 +1,12 @@
 # introduction
 I think it would be neat to have a simple filesystem for the browser.
 
-## install
+## Install
+
+### Requirements
+* [nodejs](nodejs.org)
+* [bower](bower.io)
+* [gulp](gulpjs.com)
 
 ``` bash
 $ git clone https://github.com/FireNeslo/bro-fs.git
