@@ -28,16 +28,16 @@
     "bootstrap": "~3.1.1",
     "filer.js": "~0.4.3",
     "q": "1",
-    "mimetype-js": "rsdoiel/mimetype-js#~0.0.5",
-    "path": "~3.24.10"
+    "path": "~3.24.10",
+    "mimer": "~0.2.1"
   },
   "overrides": {
     "q": {
       "main": "q.js"
     },
-    "mimetype-js": {
-      "main": "mimetype.js"
-    },
+	  "mimer" : {
+		  "main" : "dist/mimer.min.js"
+	  },
     "angular-ui-bootstrap-bower": {
       "main": [
         "ui-bootstrap.js",

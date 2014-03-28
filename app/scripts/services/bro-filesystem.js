@@ -1,7 +1,6 @@
-'use strict';
-
 angular.module('broFsApp')
   .factory('BroFileSystem', function () {
+		var mime = new Mimer();
 		function load(file, type) {
 			var reader = new FileReader(),
 				defer = Q.defer();
@@ -88,14 +87,14 @@ angular.module('broFsApp')
 		FileSystem.prototype.load = function(file, type) {
 			var self = this;
 			return this.open(file).then(function(file) {
-				type = type || MimeType.lookup(file.name);
+				type = type || mime.get(file.name);
 				return self.loader(type, file);
 			})
 		};
 		FileSystem.prototype.save = function(path, data, options) {
 			var self = this;
 			options = angular.extend({
-				type : MimeType.lookup(path),
+				type : mime.get(path),
 				data : data
 			}, options);
 			return this.write(path, options);

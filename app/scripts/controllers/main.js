@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('broFsApp')
   .controller('MainCtrl', function ($scope, FilerFs,VirtualFs) {
 		Q.spawn(function* () {

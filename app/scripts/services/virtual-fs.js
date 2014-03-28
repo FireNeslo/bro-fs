@@ -2,11 +2,12 @@
 
 angular.module('broFsApp')
   .factory('VirtualFs', function (BroFileSystem) {
+		var mime = new Mimer();
 		var r = path.resolve.bind(path);
 		function VirtualDirectory() {}
 		function VirtualFile(f) {
 			this.name = f.name;
-			this.type = f.type || MimeType.lookup(f.name);
+			this.type = f.type || mime.get(f.name);
 			this.data = f.data ? new Blob([f.data], {type: this.type}) : undefined;
 		}
 		VirtualDirectory.prototype.toArray = function() {
@@ -113,7 +114,7 @@ angular.module('broFsApp')
 				var self = this;
 				return this.create(filename).then(function(file) {
 					file.data = new Blob([options.data], {
-						type : (options && options.type) || MimeType.lookup(filename),
+						type : (options && options.type) || mime.get(filename),
 					});
 					return self;
 				})

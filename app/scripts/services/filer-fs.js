@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('broFsApp')
   .factory('FilerFs', function (BroFileSystem) {
 		var methods = BroFileSystem.methods
