@@ -1,0 +1,62 @@
+{
+  "name": "bro-fs",
+  "version": "0.0.0",
+  "homepage": "none",
+  "authors": [
+    "Øystein Ø. Olsen <fireneslo@gmail.com>"
+  ],
+  "description": "filesystem for the browser",
+  "main": "index.js",
+  "keywords": [
+    "comic",
+    "html5",
+    "js"
+  ],
+  "license": "NO",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.14",
+    "angular-route": "~1.2.14",
+    "angular-ui-bootstrap-bower": "~0.10.0",
+    "bootstrap": "~3.1.1",
+    "filer.js": "~0.4.3",
+    "q": "1",
+    "mimetype-js": "rsdoiel/mimetype-js#~0.0.5",
+    "path": "~3.24.10"
+  },
+  "overrides": {
+    "q": {
+      "main": "q.js"
+    },
+    "mimetype-js": {
+      "main": "mimetype.js"
+    },
+    "angular-ui-bootstrap-bower": {
+      "main": [
+        "ui-bootstrap.js",
+        "ui-bootstrap-tpls.js"
+      ],
+      "dependencies": {
+        "angular": ">=1",
+        "bootstrap": "~3.1.1"
+      }
+    },
+    "bootstrap": {
+      "main": [
+        "./dist/css/bootstrap.css",
+        "./dist/fonts/glyphicons-halflings-regular.eot",
+        "./dist/fonts/glyphicons-halflings-regular.svg",
+        "./dist/fonts/glyphicons-halflings-regular.ttf",
+        "./dist/fonts/glyphicons-halflings-regular.woff"
+      ],
+      "dependencies": {}
+    }
+  }
+}
