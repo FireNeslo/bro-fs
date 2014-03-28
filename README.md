@@ -16,5 +16,6 @@ $ npm install
 $ bower install
 $ gulp
 $ gulp watch &
+$ cd app
 $ python -m SimpleHTTPServer
 ```
