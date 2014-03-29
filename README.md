@@ -6,7 +6,7 @@ I think it would be neat to have a simple filesystem for the browser.
 * [bower](http://bower.io)
 * [gulp](http://gulpjs.com)
 
-## usage additions that was not in FileJS all Filer methods now use promises
+## Usage
 ```js
 var fs = new FilerFs({
     persistent: false,
