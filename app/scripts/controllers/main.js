@@ -7,9 +7,17 @@ angular.module('broFsApp')
 				size: 1024 * 1024
 			});
 
-			yield fs.save('index.html', '<h1>hello world!</h1>');
+			yield fs.save('panel.html',
+			'<div class="panel panel-default">\n' +
+			' <div class="panel-heading">\n' +
+			'   <h3 class="panel-title">Panel title</h3>\n' +
+			' </div>\n' +
+			' <div class="panel-body">Panel content</div>\n' +
+			'</div>');
+
 			yield fs.save('hello.json', JSON.stringify({
-				"hello" : "world"
+				"hello" : "world",
+				'fs' : fs
 			}));
 
 			files = yield fs.ls('.');
