@@ -26,7 +26,7 @@ save('panel.html',
     document.body.appendChild(element);
 }).then(function() {
     return fs.ls('.');
-}).then(function(filelist) {
+}).then(function(fileList) {
     var list = document.createElement('ol'),
         item, file;
     for (var i = 0; i < fileList.length; i++) {
@@ -36,7 +36,7 @@ save('panel.html',
         list.appendChild(item);
     }
     document.body.appendChild(list);
-});
+}).done();
 ```
 
 
